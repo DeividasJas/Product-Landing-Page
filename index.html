@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cssReset.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/cssReset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Landing Page</title>
   </head>
   <body>
@@ -13,14 +13,17 @@
       <h1 class="header__logo">LOGO</h1>
     </header>
 
+    
     <main class="">
-      <!-- <div class="mainImgContainer">
+      <div class="procesContainer"></div>
+      
+      <div class="mainImgContainer">
         <h1 class="mainImgContainer__h1">
           new year, new “you” with [product name]
         </h1>
         <button class="mainImgContainer__tryMeBtn">try[product_name]</button>
       </div>
-
+      
       <ul class="propertiesList">
         <li class="propertiesList__item">
           <img src="./assests/shield-heart-solid.svg" alt="" />
@@ -39,7 +42,7 @@
           <p>Improves digestion</p>
         </li>
       </ul>
-      <!-- subscribe container ----------------------------->
+      
       <div class="subscribeContainer">
         <ul class="subscribeContainer__list">
           <li class="subscribeContainer__item">
@@ -57,8 +60,6 @@
         </ul>
         <h2 class="subscribeContainer__header">subscribe & save</h2>
       </div>
-
-      <!-- Benefits container ----------------------------- -->
 
       <div class="benefitsContainer">
         <h2 class="benefitsContainer__header">
@@ -114,55 +115,251 @@
           </li>
         </ul>
       </div>
-      -->
-
-      <!-- USDA Container ----------------------------- -->
-
+      
       <div class="usdaContainer">
         <img
-          src="./assests/usda-organic-logo-1.png"
-          alt="'Usda ORANIC' logo"
-          class="usdaContainer__img"
+        src="./assests/usda-organic-logo-1.png"
+        alt="'Usda ORANIC' logo"
+        class="usdaContainer__img"
         />
         <h4 class="usdaContainer__text">
           only exceptional USDA certified organic sustainable sourced
           ingredients qualify.
         </h4>
       </div>
-
-      <!-- IMAGE SLIDER CONTAINER---------------------------- -->
-
+      
       <div class="sliderContainer">
         <h1 class="sliderContainer__productNameRed">
           [product name]<span class="sliderContainer__productName"> blend</span>
         </h1>
-        <h2 class="sliderContainer__description">
-          <span class="sliderContainer__bold">Metabolism Boosting</span
-          ><br />These powerful superfoods ignite your metabolism and reduce
-          bloating. They improve digestion and deliver the energy you need to
-          get things done.
-          <br />
-          <span>Main Organic Ingiridents:</span>
-        </h2>
+        <div class="sliderContainer__mediaQuery">
+          <h2 class="sliderContainer__description">
+            <span class="sliderContainer__bold">Metabolism Boosting</span
+            ><br />These powerful superfoods ignite your metabolism and reduce
+            bloating. They improve digestion and deliver the energy you need to
+            get things done.
+            <br />
+            <span>Main Organic Ingiridents:</span>
+          </h2>
+          
+          <!-- all slides starts here ----------------------->
+          <div class="glide" id="glideCarousel">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <!-- slide one  -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/green tea.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- second slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/green tea.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- third slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assests/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assests/green tea.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- slide navigation -->
+            <div class="glide">
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                <img src="./assests/angle-left-solid.png" alt="back arrow" />
+                </button>
+                
+                <div class="glide__progress" id="tracker">
+                  <img
+                  src="./assests/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgOne"
+                  />
+                  <img
+                  src="./assests/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgTwo"
+                  />
+                  <img
+                  src="./assests/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgThree"
+                  />
+                </div>
+
+                <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+                >
+                <img
+                src="./assests/angle-left-solid.png"
+                alt="next arrow"
+                class="glide__nextArrow"
+                />
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="sliderContainer__button"><h2>add to cart</h2></button>
       </div>
     </main>
-
-    <footer class="footer"><h5>iam a footer</h5></footer>
-
-    <!-- <div class="card">
-      <span class="card__img"></span>
-      <div class="card__content">
-        <ul class="card__list">
-          <li class="card__item card__item--active">adobe</li>
-          <li class="card__item">skype</li>
-          <li class="card__item">facebook</li>
-        </ul>
-        <p class="card__dessc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-          quaerat.
-        </p>
-        <a href="" class="card__link">Visit Link</a>
+    <footer class="footer">
+      <p class="footer__FAQ">FAQs</p>
+      <div class="footer_accordion">
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h4 class="footer__accordionHeader">
+              What are the Effective ingredients in [product name]?
+            </h4>
+            <img
+              src="./assests/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrow"
+            />
+          </div>
+          <h3 class="footer__accordionContent">
+            Pellentesque vitae convallis quam, in ultricies leo:
+            <br />
+            <br />
+            <span class="footer__bold"></span>
+            <span class="footer__bold">Lorem ipsum dolor sit ame:</span>
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            gravida sollicitudin diam, vestibulum placerat nisl finibus ut. Duis
+            ac pulvinar justo. Aliquam mi nisl, gravida eget suscipit non,
+            sodales in tortor. Nam purus sem, blandit non justo ac, ornare
+            tempor quam. Morbi pharetra vehicula ornare. Proin gravida turpis
+            orci, sit amet sollicitudin mi rutrum nec.
+            <br />
+            <br />
+            <span class="footer__bold">Curabitur gravida ullamcorper dui:</span>
+            <br />
+            Pellentesque - tincidunt efficitur suscipit. Aliquam commodo id est
+            eu cursus. Mauris ut elit quis nunc eleifend egestas in ac lorem.
+            Pellentesque - vitae convallis quam, in ultricies leo. Curabitur
+            gravida ullamcorper dui. Aliquam velit arcu, ultrices nec mauris a,
+            vehicula fermentum nisi. Donec commodo - nisl at magna congue
+            volutpat. Suspendisse sed nulla ultricies, elementum risus
+            venenatis, eleifend sem. Vestibulum rutrum ut lectus id dignissim.
+            Curabitur eros diam - bibendum in ipsum ut, posuere suscipit magna.
+            Maecenas at congue purus, vel facilisis odio. Praesent scelerisque,
+            ipsum vel ultricies congue, odio turpis pharetra tellus, ac auctor
+            orci tortor volutpat lectus. Vestibulum tempor - ipsum et nibh
+            mattis, sed volutpat dui bibendum.
+          </h3>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assests/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assests/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assests/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
       </div>
-    </div> -->
+    </footer>
+    
+    
+    <script type="module" src="/src/index.js"></script>
   </body>
 </html>
+
+<!-- <div class="card">
+  <span class="card__img"></span>
+    <div class="card__content">
+      <ul class="card__list">
+        <li class="card__item card__item--active">adobe</li>
+        <li class="card__item">skype</li>
+        <li class="card__item">facebook</li>
+      </ul>
+      <p class="card__dessc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+        quaerat.
+      </p>
+      <a href="" class="card__link">Visit Link</a>
+    </div>
+  </div> -->
