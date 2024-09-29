@@ -1,8 +1,8 @@
 import Glide from '@glidejs/glide';
 
 const pathToSlideImage = [
-  './asests/Ellipse-full.png',
-  './asests/Ellipse-Empty.png',
+  './assets/Ellipse-full.png',
+  './assets/Ellipse-Empty.png',
 ];
 
 const glide = new Glide('.glide', {

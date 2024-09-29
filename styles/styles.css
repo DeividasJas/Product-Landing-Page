@@ -154,7 +154,7 @@ body {
 .header {
   position: relative;
   height: 52px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .header__hamburger {
   text-align: center;
@@ -190,7 +190,7 @@ body {
   }
   .header__navbar {
     font-size: 16px;
-    color: #0B0A0C;
+    color: #0b0a0c;
     display: flex;
     gap: 20px;
     position: absolute;
@@ -199,7 +199,7 @@ body {
   }
   .header__navbar a {
     font-family: "Plus Jakarta Sans", sans-serif;
-    color: #0B0A0C;
+    color: #0b0a0c;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -295,11 +295,14 @@ main {
   height: 118px;
   width: 170px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  line-height: 17.64px;
+  display: grid;
+  place-items: center;
   gap: 15px;
+  font-size: 14px;
+}
+.propertiesList__item:hover .propertiesList__textIconWrapper svg path {
+  fill: #c2110e;
 }
 .propertiesList__textIconWrapper {
   height: 90px;
@@ -319,6 +322,7 @@ main {
   .propertiesList__item {
     width: 150px;
     font-size: 16px;
+    line-height: 20.16px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -328,20 +332,30 @@ main {
   .propertiesList__item {
     width: 213px;
     height: 98px;
-  }
-  .propertiesList__item:hover .propertiesList__textIconWrapper svg path {
-    fill: red;
+    display: flex;
   }
   .propertiesList__textIconWrapper {
-    display: flex;
     flex-direction: row;
-    justify-content: end;
-    gap: 0;
-    width: max-content;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    gap: 10px;
   }
-  .propertiesList__textIconWrapper svg:hover {
-    fill: red;
-    background-color: yellow;
+  .propertiesList__textIconWrapper p {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+  }
+  .propertiesList__item:last-child .propertiesList__textIconWrapper {
+    justify-content: center;
+  }
+  .propertiesList__item:last-child .propertiesList__textIconWrapper p {
+    flex: 0 1 auto;
+    text-align: left;
+    max-width: 90px;
+    margin-left: 10px;
   }
 }
 
@@ -394,11 +408,23 @@ main {
     text-align: center;
     line-height: 20.16px;
   }
+  .subscribeContainer__item:nth-child(1) {
+    width: 120px;
+  }
   .subscribeContainer__header {
     position: absolute;
     top: 40px;
     right: 50%;
     transform: translateX(50%) rotate(0deg);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .subscribeContainer__item:nth-child(2) {
+    width: 100px;
+  }
+  .subscribeContainer__item:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.08s;
   }
 }
 
@@ -448,9 +474,9 @@ main {
   align-items: center;
   line-height: 17.64px;
 }
-.benefitsContainer__item img {
-  width: 30px;
-  height: 30px;
+.benefitsContainer__item svg {
+  width: 22px;
+  height: 22px;
 }
 .benefitsContainer__bold {
   font-weight: 800;
@@ -470,9 +496,23 @@ main {
     font-size: 16px;
     line-height: 20.16px;
   }
-  .benefitsContainer__item img {
-    width: 50px;
-    height: 50px;
+  .benefitsContainer__item svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .benefitsContainer__header {
+    width: 816px;
+  }
+  .benefitsContainer__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "item3 item2 item4" "item6 item5 item1";
+    gap: 60px;
+    width: 919px;
+  }
+  .benefitsContainer__item:hover .benefitsContainer__iconWrapper svg path {
+    fill: #c2110e;
   }
 }
 
@@ -483,7 +523,7 @@ main {
   align-items: center;
   gap: 30px;
   padding: 40px 0;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .usdaContainer__img {
   width: 133px;
@@ -506,6 +546,11 @@ main {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .usdaContainer__text {
+    width: 351px;
+  }
+}
 
 .sliderContainer {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -513,6 +558,7 @@ main {
   width: 100%;
   padding: 30px 0;
   text-align: center;
+  position: relative;
 }
 .sliderContainer__productNameRed {
   color: #c2110e;
@@ -555,6 +601,11 @@ main {
     width: 524px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .sliderContainer__description {
+    width: 347px;
+  }
+}
 
 .glide {
   width: 258px;
@@ -562,10 +613,13 @@ main {
   color: #000000;
   font-size: 14px;
   font-weight: 400;
+  border: 1px solid red;
+  width: 100%;
 }
 .glide__track {
   height: 257px;
   width: 258px;
+  margin: 0 auto;
 }
 .glide__slide {
   display: flex;
@@ -622,6 +676,21 @@ main {
 @media screen and (min-width: 768px) {
   .glide__singleProduct {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .glide {
+    width: 100%;
+  }
+  .glide--OnlySlides {
+    border: 1px solid blue;
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+  }
+  .glide--navigation {
+    width: 174px;
+    margin: 0 auto;
   }
 }
 
