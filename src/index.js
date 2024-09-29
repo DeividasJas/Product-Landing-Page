@@ -1,4 +1,5 @@
 import Glide from '@glidejs/glide';
+import glidesHTML from './glidesHTML';
 
 const pathToSlideImage = [
   './assets/Ellipse-full.png',
@@ -38,4 +39,5 @@ glide.on('move', (newIndex) => {
 
 
 
-glide.mount();
+glidesHTML()
+glide.mount(); 
