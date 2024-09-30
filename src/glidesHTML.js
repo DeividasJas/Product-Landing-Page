@@ -1,8 +1,7 @@
-export default function(){
-    const sliderContainer =  document.getElementById('sliderSection')
-    
+export default function () {
+  const sliderContainer = document.getElementById('sliderSection');
 
-    const sliderHTML = `
+  const sliderHTML = `
     <h1 class="sliderSection__productNameRed">
           [product name]<span class="sliderSection__productName"> blend</span>
         </h1>
@@ -136,7 +135,7 @@ export default function(){
           <h2>add to cart</h2>
         </button>
     
-    `
+    `;
 
-    sliderContainer.insertAdjacentHTML('beforeend', sliderHTML )
+  // sliderContainer.insertAdjacentHTML('beforeend', sliderHTML )
 }

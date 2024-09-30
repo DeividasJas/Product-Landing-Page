@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <a href="">
         <img src="/assets/top.png" alt="menu" class="header__hamburger" />
       </a>
@@ -18,19 +18,21 @@
         <a href="" class="header__navbarLink">mission</a>
       </nav>
       <a href="" class="header__logo">LOGO</a>
-    </header>
+    </header> -->
+    <header id="headerContainer"></header>
 
     <main>
-      <div class="procesContainer"></div>
-
-      <div class="mainImgContainer">
+      
+      
+      <!-- <div class="mainImgContainer">
         <h1 class="mainImgContainer__h1">
           new year, new “you” with [product name]
         </h1>
         <button class="mainImgContainer__tryMeBtn">try[product_name]</button>
-      </div>
+      </div> -->
+      <section id="mainImgContainer"></section>
 
-      <ul class="propertiesList">
+      <!-- <ul class="propertiesList">
         <li class="propertiesList__item">
           <div class="propertiesList__textIconWrapper">
             <svg
@@ -128,9 +130,11 @@
             <p>Improves digestion</p>
           </div>
         </li>
-      </ul>
+      </ul> -->
 
-      <div class="subscribeContainer">
+      <ul id="propertiesList"></ul>
+
+      <!-- <div class="subscribeContainer">
         <ul class="subscribeContainer__list">
           <li class="subscribeContainer__item">
             <img src="./assets/cycle-icon.png" alt="cycle icon" />
@@ -146,9 +150,10 @@
           </li>
         </ul>
         <h2 class="subscribeContainer__header">subscribe & save</h2>
-      </div>
+      </div> -->
+      <section id="subscribeContainer"></section>
 
-      <div class="benefitsContainer">
+      <!-- <div class="benefitsContainer">
         <h2 class="benefitsContainer__header">
           Performance nutrition and healthy transformation made simple:
         </h2>
@@ -183,7 +188,7 @@
             </h4>
           </li>
           <li class="benefitsContainer__item item2">
-            <!-- <img src="./assets/bolt-solid 1.svg" alt="thunder logo" /> -->
+             <img src="./assets/bolt-solid 1.svg" alt="thunder logo" />
             <div class="benefitsContainer__iconWrapper">
               <svg
                 width="20"
@@ -218,7 +223,7 @@
             </h4>
           </li>
           <li class="benefitsContainer__item item3">
-            <!-- <img src="./assets/Group 143-2.svg" alt="running logo" /> -->
+             <img src="./assets/Group 143-2.svg" alt="running logo" /> 
             <div class="benefitsContainer__iconWrapper">
               <svg
                 width="20"
@@ -254,7 +259,7 @@
             </h4>
           </li>
           <li class="benefitsContainer__item item4">
-            <!-- <img src="./assets/shield-virus-solid 1-1.svg" alt="shield logo" /> -->
+             <img src="./assets/shield-virus-solid 1-1.svg" alt="shield logo" /> 
             <div class="benefitsContainer__iconWrapper">
               <svg
                 width="20"
@@ -284,7 +289,7 @@
             </h4>
           </li>
           <li class="benefitsContainer__item item5">
-            <!-- <img src="./assets/Group 142-1.svg" alt="check logo" /> -->
+             <img src="./assets/Group 142-1.svg" alt="check logo" /> 
             <div class="benefitsContainer__iconWrapper">
               <svg
                 width="20"
@@ -306,7 +311,7 @@
             </h4>
           </li>
           <li class="benefitsContainer__item item6">
-            <!-- <img src="./assets/Group 147.svg" alt="thumbs up logo" /> -->
+             <img src="./assets/Group 147.svg" alt="thumbs up logo" /> 
             <div class="benefitsContainer__iconWrapper">
               <svg
                 width="20"
@@ -328,9 +333,10 @@
             </h4>
           </li>
         </ul>
-      </div>
+      </div> -->
+      <section id="benefitsContainer"></section>
 
-      <div class="usdaContainer">
+      <!-- <div class="usdaContainer" id="usdaContainer">
         <img
           src="./assets/usda-organic-logo-1.png"
           alt="'Usda ORANIC' logo"
@@ -340,13 +346,148 @@
           only exceptional USDA certified organic sustainable sourced
           ingredients qualify.
         </h4>
-      </div>
+      </div> -->
+      <section id="usdaContainer"></section>
 
       <section class="sliderSection" id="sliderSection">
-        
+        <h1 class="sliderSection__productNameRed">
+          [product name]<span class="sliderSection__productName"> blend</span>
+        </h1>
+
+        <!-- all slides starts here ----------------------->
+        <div class="glide" id="glideCarousel">
+          <section class="glide--slidesWithDescription">
+            <h2 class="glide__description">
+              <span class="glide__bold">Metabolism Boosting</span><br />These
+              powerful superfoods ignite your metabolism and reduce bloating.
+              They improve digestion and deliver the energy you need to get
+              things done.
+              <br />
+              <span>Main Organic Ingredients:</span>
+            </h2>
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <!-- slide one  -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic ceylon cinnamon bark</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic green tea</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- second slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic green tea</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- third slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+
+          <!-- slide navigation -->
+
+          <section class="glide glide--navigationContainer">
+            <div class="glide__navigation" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <img src="./assets/angle-left-solid.png" alt="back arrow" />
+              </button>
+
+              <div class="glide__progress" id="tracker">
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgOne"
+                />
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgTwo"
+                />
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgThree"
+                />
+              </div>
+
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <img src="./assets/angle-left-solid.png" alt="next arrow" />
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <button class="sliderSection__button">
+          <h2>add to cart</h2>
+        </button>
       </section>
+
+      <section id="processContainer"></section>
     </main>
-    <footer class="footer">
+
+    <!-- <footer class="footer">
       <p class="footer__FAQ">FAQs</p>
       <div class="footer_accordion">
         <div class="footer__accordionItem">
@@ -422,24 +563,10 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <footer id="footer">
 
+    </footer>
     <script type="module" src="/src/index.js"></script>
   </body>
 </html>
-
-<!-- <div class="card">
-  <span class="card__img"></span>
-    <div class="card__content">
-      <ul class="card__list">
-        <li class="card__item card__item--active">adobe</li>
-        <li class="card__item">skype</li>
-        <li class="card__item">facebook</li>
-      </ul>
-      <p class="card__dessc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-        quaerat.
-      </p>
-      <a href="" class="card__link">Visit Link</a>
-    </div>
-  </div> -->
