@@ -1,8 +1,18 @@
-# VanillaJs-project
+Welcome to Landing Page
 
-im using a parcel bundler so i could access all imports from glide library
+Create this responsive website page as my coding interview task for Impact Brands.
 
-npm run start to start dev envirominet 
-npm run scss to change styles
+How to start this project:
+npm i
+npm run dev
+npm run scss
 
-Added short transition to scale up subscribe and scale section 
+
+
+
+To rename product go to index.js and input desired name into createFooterContainer() and   createSliderContainer()
+
+Technologies used:
+HTML, SCSS, JavaScript, node, glidejs, vite
+
+Made by Deividas Jasas

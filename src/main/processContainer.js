@@ -1,18 +1,10 @@
 import {
   arrowIcon,
-  bubbleIcon,
   errorIcon,
   fistIcon,
   heartIcon,
   personIcon,
-  swirlingLine,
 } from '../svgIcons';
-
-const images = {
-  swirlingLine: swirlingLine(),
-  bubbleIcon: bubbleIcon(),
-  arrowIcon: arrowIcon(),
-};
 
 const data = [
   {
@@ -41,66 +33,62 @@ const data = [
   },
 ];
 
-export default function createProcessContainer() {
-  // create container for everything
+export default function processContainer() {
+  // everything in here will be added to the container
+
   const container = document.getElementById('processContainer');
   container.className = 'processContainer';
 
-  // created header and added to container
   const header = document.createElement('h3');
   header.className = 'processContainer__header';
   header.innerText = 'meticulous methodical process';
   container.appendChild(header);
 
-  // create div for rest of the content give him a class for later manipulation
-  const content = document.createElement('div');
-  content.className = 'processContainer__content';
+  // div for all content
+  const allContent = document.createElement('div');
+  allContent.className = 'processContainer__contentWrapper';
 
-  data.forEach((item) => {
-    const contentItem = document.createElement('div');
-    contentItem.className = 'processContainer__contentItem';
-    content.appendChild(contentItem);
-
-    // create wrap for both icons
+  // store arrow and svg icon will disappear on bigger media query
+  data.forEach((item, index) => {
     const iconsWrapper = document.createElement('div');
     iconsWrapper.className = 'processContainer__iconsWrapper';
-    contentItem.appendChild(iconsWrapper);
+    iconsWrapper.innerHTML = item.svg;
+    iconsWrapper.innerHTML += arrowIcon();
 
-    // create div;s and append different svg's to it
-    const icon = document.createElement('div');
-    icon.className = 'processContainer__icon';
-    icon.innerHTML = item.svg;
-    iconsWrapper.appendChild(icon);
+    const textWrapper = document.createElement('div');
+    textWrapper.className = 'processContainer__textWrapper';
 
-    // create arrow icon div and append svg to it
-    const arrowIcon = document.createElement('div');
-    arrowIcon.className = 'processContainer__arrowWrapper';
-    arrowIcon.innerHTML = images.arrowIcon;
-    iconsWrapper.appendChild(arrowIcon);
+    // header with text
+    const header = document.createElement('h4');
+    header.className = 'processContainer__textHeader';
+    header.innerText = item.header;
+    const text = document.createElement('p');
+    text.className = 'processContainer__text';
+    text.innerText = item.content;
 
+    textWrapper.appendChild(header);
+    textWrapper.appendChild(text);
 
+    const iconTextWrapper = document.createElement('div');
+    iconTextWrapper.className = 'processContainer__iconTextWrapper';
+    iconTextWrapper.appendChild(iconsWrapper);
+    iconTextWrapper.appendChild(textWrapper);
+    allContent.appendChild(iconTextWrapper);
 
+    if (index === 1) {
+      const div = document.createElement('div');
+      div.className = 'processContainer__verticalLine';
 
-    
-    // create header
-    const contentHeader = document.createElement('h4');
-    contentHeader.className = 'processContainer__contentHeader';
-    contentHeader.innerText = item.header;
+      div.innerHTML = `${fistIcon()}${errorIcon()}${heartIcon()}${personIcon()}`;
 
-    // create text
-    const contentText = document.createElement('p');
-    contentText.className = 'processContainer__contentText';
-    contentText.innerText = item.content;
+      allContent.appendChild(div);
+    }
 
-    // create text header wrapper and append them both
-    const itemContentWrapper = document.createElement('div');
-    itemContentWrapper.className = 'processContainer__itemContentWrapper';
-    itemContentWrapper.appendChild(contentHeader);
-    itemContentWrapper.appendChild(contentText);
+    // adding class here to avoid complex css selectors
+    if (index % 2 === 1) {
+      iconTextWrapper.classList.add('justify-end'); // Add this class for every second item
+    }
 
-    //append content wrapper to item (below icons)
-    contentItem.appendChild(itemContentWrapper);
+    container.appendChild(allContent);
   });
-
-  container.appendChild(content);
 }

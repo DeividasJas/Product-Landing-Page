@@ -1,0 +1,568 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/cssReset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Landing Page</title>
+  </head>
+
+  <body>
+    <!-- <header class="header">
+      <a href="">
+        <img src="/assets/top.png" alt="menu" class="header__hamburger" />
+      </a>
+      <nav class="header__navbar">
+        <a href="" class="header__navbarLink">shop</a>
+        <a href="" class="header__navbarLink">mission</a>
+      </nav>
+      <a href="" class="header__logo">LOGO</a>
+    </header> -->
+    <header id="headerContainer"></header>
+
+    <main>
+      <!-- <div class="mainImgContainer">
+        <h1 class="mainImgContainer__h1">
+          new year, new “you” with [product name]
+        </h1>
+        <button class="mainImgContainer__tryMeBtn">try[product_name]</button>
+      </div> -->
+      <section id="mainImgContainer"></section>
+
+      <!-- <ul class="propertiesList">
+        <li class="propertiesList__item">
+          <div class="propertiesList__textIconWrapper">
+            <svg
+              width="42"
+              height="48"
+              viewBox="0 0 50 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28.4361 0C14.9334 0 4 10.7464 4 24C4 37.2536 14.9334 48 28.4361 48C35.0618 48 41.0642 45.4071 45.4703 41.2071C46.017 40.6821 46.1591 39.8679 45.8093 39.2036C45.4594 38.5393 44.705 38.1643 43.9506 38.2929C42.8791 38.475 41.7858 38.5714 40.6596 38.5714C30.0652 38.5714 21.4716 30.1286 21.4716 19.7143C21.4716 12.6643 25.4076 6.525 31.2351 3.28929C31.902 2.91429 32.2409 2.16429 32.0769 1.43571C31.9129 0.707143 31.2788 0.160714 30.5135 0.0964287C29.8247 0.0428573 29.1359 0.0107141 28.4361 0.0107141V0Z"
+                fill="#0B0A0C"
+              />
+            </svg>
+
+            <p>Improves sleep</p>
+          </div>
+        </li>
+
+        <li class="propertiesList__item">
+          <div class="propertiesList__textIconWrapper">
+            <svg
+              width="47"
+              height="48"
+              viewBox="0 0 47 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.3846 0.27337C23.9804 0.0942655 23.5474 0 23.0951 0C22.6428 0 22.2098 0.0942655 21.8056 0.27337L3.68563 7.80518C1.56858 8.68185 -0.00957917 10.7274 4.37699e-05 13.1972C0.0481585 22.5483 3.97432 39.6575 20.5546 47.4344C22.1617 48.1885 24.0285 48.1885 25.6355 47.4344C42.2159 39.6575 46.142 22.5483 46.1901 13.1972C46.1998 10.7274 44.6216 8.68185 42.5046 7.80518L24.3846 0.27337ZM12.3174 20.861C12.3174 17.6748 14.9541 15.0825 18.2163 15.0825C19.7752 15.0825 21.2764 15.6952 22.383 16.7698L23.0951 17.4674L23.8072 16.7698C24.9138 15.6858 26.415 15.0825 27.9739 15.0825C31.2265 15.0825 33.8728 17.6654 33.8728 20.861C33.8728 22.3881 33.2473 23.8586 32.1503 24.9427L24.1921 32.7384C23.5955 33.3229 22.6139 33.3229 22.0173 32.7384L14.0592 24.9427C12.9525 23.8586 12.3366 22.3881 12.3366 20.861H12.3174Z"
+                fill="#0B0A0C"
+              />
+            </svg>
+
+            <p>Boosts immune system</p>
+          </div>
+        </li>
+        <li class="propertiesList__item">
+          <div class="propertiesList__textIconWrapper">
+            <svg
+              width="36"
+              height="48"
+              viewBox="0 0 36 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 -6.10352e-05C16.6594 -6.10352e-05 18 1.34056 18 2.99994V13.4999H12V2.99994C12 1.34056 13.3406 -6.10352e-05 15 -6.10352e-05ZM3 5.99994C3 4.34056 4.34062 2.99994 6 2.99994C7.65938 2.99994 9 4.34056 9 5.99994V13.4999H3V5.99994ZM21 5.99994C21 4.34056 22.3406 2.99994 24 2.99994C25.6594 2.99994 27 4.34056 27 5.99994V14.9999C27 16.6593 25.6594 17.9999 24 17.9999C22.3406 17.9999 21 16.6593 21 14.9999V5.99994ZM30 11.9999C30 10.3406 31.3406 8.99994 33 8.99994C34.6594 8.99994 36 10.3406 36 11.9999V17.9999C36 19.6593 34.6594 20.9999 33 20.9999C31.3406 20.9999 30 19.6593 30 17.9999V11.9999ZM21 20.2499V20.1937C21.8813 20.6999 22.9031 20.9999 24 20.9999C25.2375 20.9999 26.3813 20.6249 27.3375 19.9874C28.1531 22.3218 30.3844 23.9999 33 23.9999C34.0969 23.9999 35.1188 23.7093 36 23.1937V23.9999C36 28.9031 33.6469 33.2624 30 35.9999V44.9999C30 46.6593 28.6594 47.9999 27 47.9999H12C10.3406 47.9999 9 46.6593 9 44.9999V37.6499C7.37813 36.9093 5.8875 35.8874 4.60312 34.6031L3.51562 33.5156C1.26562 31.2656 0 28.2093 0 25.0312V22.4999C0 19.1906 2.69063 16.4999 6 16.4999H14.25C16.3219 16.4999 18 18.1781 18 20.2499C18 22.3218 16.3219 23.9999 14.25 23.9999H9C8.175 23.9999 7.5 24.6749 7.5 25.4999C7.5 26.3249 8.175 26.9999 9 26.9999H14.25C17.9813 26.9999 21 23.9812 21 20.2499Z"
+                fill="#0B0A0C"
+              />
+            </svg>
+
+            <p>Enhances strength</p>
+          </div>
+        </li>
+        <li class="propertiesList__item">
+          <div class="propertiesList__textIconWrapper">
+            <svg
+              width="52"
+              height="48"
+              viewBox="0 0 52 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.34 47.1526V43.5422C19.34 40.2386 22.018 37.5605 25.3217 37.5605H31.8189C32.1688 37.5605 32.4546 37.2757 32.4557 36.9258L32.4562 36.7384C32.4567 36.5647 32.3935 36.3941 32.271 36.2708C32.1506 36.1499 31.9902 36.0832 31.8197 36.0832H13.1506C9.84689 36.0832 7.16882 33.4051 7.16882 30.1015V29.8981C7.16882 26.5944 9.84689 23.9163 13.1506 23.9163H37.941C38.2928 23.9163 38.5778 23.6313 38.5778 23.2795V23.173C38.5778 22.8212 38.2928 22.5362 37.941 22.5362H15.9621C14.3748 22.5362 12.8797 21.921 11.752 20.804C10.6244 19.687 9.99529 18.1977 9.98034 16.6105L9.97981 16.5435C9.96486 14.9354 10.5798 13.4205 11.712 12.2779C12.8439 11.1353 14.3532 10.506 15.9616 10.506H32.2035C32.5534 10.506 32.8392 10.2212 32.8403 9.87128V9.81843C32.8408 9.65829 32.7874 9.50082 32.6812 9.38098C32.5584 9.24246 32.3871 9.16559 32.2037 9.16559H27.7892C24.4855 9.16559 21.8075 6.48752 21.8075 3.18384V0.846605C21.8075 0.378997 22.1865 0 22.6541 0H26.306C26.7737 0 27.1527 0.378997 27.1527 0.846605V3.18358C27.1527 3.53535 27.4377 3.8204 27.7895 3.8204H32.204C33.8051 3.8204 35.3096 4.44494 36.4402 5.57873C37.5708 6.71252 38.1908 8.2189 38.186 9.82003V9.83498C38.1812 11.4294 37.5631 12.9689 36.436 14.0968C35.3059 15.2279 33.8025 15.8509 32.204 15.8509H15.9784C15.8038 15.8509 15.6327 15.9149 15.5097 16.0391C15.3891 16.1608 15.3231 16.3222 15.3247 16.4936L15.3253 16.5606C15.3285 16.9075 15.6149 17.1913 15.9618 17.1913H37.9549C41.2508 17.1913 43.9227 19.8632 43.9227 23.1591V23.2798C43.9227 26.5835 41.2447 29.2615 37.941 29.2615H13.1506C12.7988 29.2615 12.5138 29.5466 12.5138 29.8983V30.1017C12.5138 30.4535 12.7988 30.7385 13.1506 30.7385H31.7673C33.3714 30.7385 34.9208 31.3594 36.0537 32.4947C37.1857 33.6288 37.8065 35.1362 37.8017 36.7384L37.8011 36.9424C37.7963 38.5405 37.1689 40.0419 36.0348 41.1684C34.9034 42.2924 33.3621 42.9062 31.7671 42.9062H25.3223C24.9705 42.9062 24.6854 43.1913 24.6854 43.543V47.1534C24.6854 47.621 24.3064 48 23.8388 48H20.1868C19.7192 48 19.3402 47.621 19.3402 47.1534L19.34 47.1526Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M45.0667 18.8085L45.055 18.7909C44.7366 18.3065 44.8708 17.6558 45.3553 17.3374L47.5382 15.9017C48.0227 15.5833 48.6734 15.7176 48.9918 16.202L49.0035 16.2196C49.3219 16.704 49.1877 17.3547 48.7032 17.6731L46.5203 19.1088C46.0359 19.4272 45.3852 19.293 45.0667 18.8085Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M48.992 30.6948L49.0038 30.6772C49.3222 30.1927 49.1879 29.542 48.7035 29.2236L46.5205 27.788C46.0361 27.4696 45.3854 27.6038 45.067 28.0882L45.0552 28.1058C44.7368 28.5903 44.8711 29.241 45.3555 29.5594L47.5385 30.995C48.0229 31.3134 48.6736 31.1792 48.992 30.6948Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M50.2056 22.4395H47.5931C47.0134 22.4395 46.5434 22.9094 46.5434 23.4892V23.51C46.5434 24.0897 47.0134 24.5597 47.5931 24.5597H50.2056C50.7853 24.5597 51.2553 24.0897 51.2553 23.51V23.4892C51.2553 22.9094 50.7853 22.4395 50.2056 22.4395Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M2.25213 22.9293L2.26372 22.9117C2.58195 22.4278 3.23327 22.2933 3.71718 22.6115L5.90013 24.0471C6.38404 24.3653 6.51879 25.0168 6.20041 25.5009L6.18882 25.5185C5.87059 26.0024 5.21927 26.137 4.73536 25.8187L2.55241 24.3832C2.0685 24.0649 1.93375 23.4135 2.25213 22.9293Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M2.55266 35.933L4.7356 34.4974C5.21951 34.1792 5.87106 34.3136 6.18944 34.7977L6.20102 34.8153C6.51925 35.2992 6.38487 35.9508 5.90074 36.2692L3.7178 37.7047C3.23389 38.023 2.58234 37.8886 2.26396 37.4044L2.25237 37.3868C1.93414 36.9029 2.06852 36.2514 2.55266 35.933Z"
+                fill="#0B0A0C"
+              />
+              <path
+                d="M3.66213 29.1504H1.04972C0.469974 29.1504 0 29.6204 0 30.2001V30.2209C0 30.8007 0.469974 31.2706 1.04972 31.2706H3.66213C4.24187 31.2706 4.71184 30.8007 4.71184 30.2209V30.2001C4.71184 29.6204 4.24187 29.1504 3.66213 29.1504Z"
+                fill="#0B0A0C"
+              />
+            </svg>
+
+            <p>Improves digestion</p>
+          </div>
+        </li>
+      </ul> -->
+
+      <ul id="propertiesList"></ul>
+
+      <!-- <div class="subscribeContainer">
+        <ul class="subscribeContainer__list">
+          <li class="subscribeContainer__item">
+            <img src="./assets/cycle-icon.png" alt="cycle icon" />
+            <h4>delivery every 30 days</h4>
+          </li>
+          <li class="subscribeContainer__item">
+            <img src="./assets/precent.png" alt="% icon" />
+            <h4>best value per box</h4>
+          </li>
+          <li class="subscribeContainer__item">
+            <img src="./assets/x-icon.png" alt="X icon" />
+            <h4>no commitment, cancel anytime</h4>
+          </li>
+        </ul>
+        <h2 class="subscribeContainer__header">subscribe & save</h2>
+      </div> -->
+      <section id="subscribeContainer"></section>
+
+      <!-- <div class="benefitsContainer">
+        <h2 class="benefitsContainer__header">
+          Performance nutrition and healthy transformation made simple:
+        </h2>
+        <ul class="benefitsContainer__list">
+          <li class="benefitsContainer__item item1">
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="37.94"
+                height="44"
+                viewBox="0 0 19 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_402)">
+                  <path
+                    d="M6.74496 0.231896C7.07523 -0.0817761 7.58755 -0.0774792 7.91782 0.236193C9.08644 1.34908 10.1831 2.54791 11.2077 3.84557C11.6735 3.22682 12.2028 2.55221 12.7744 2.00221C13.1089 1.68424 13.6254 1.68424 13.9599 2.00651C15.4249 3.42447 16.6655 5.29791 17.5378 7.07682C18.3973 8.82994 18.9689 10.6217 18.9689 11.885C18.9689 17.3678 14.7432 21.9999 9.48444 21.9999C4.16638 21.9999 0 17.3635 0 11.8807C0 10.2307 0.753675 8.21549 1.92229 6.22174C3.10361 4.19791 4.77186 2.08815 6.74496 0.231896ZM9.55642 17.8749C10.6277 17.8749 11.5761 17.5741 12.4695 16.9725C14.2521 15.7092 14.7305 13.1827 13.6593 11.1975C13.5407 10.9569 13.4222 10.7163 13.2443 10.4756L11.1019 13.0022C11.1019 13.0022 7.6553 8.55065 7.41396 8.24986C5.63562 10.4756 4.74222 11.7389 4.74222 13.1827C4.74222 16.1303 6.88469 17.8749 9.55642 17.8749Z"
+                    fill="#0B0A0C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_402">
+                    <rect width="18.9689" height="22" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h4>
+              Recharged
+              <span class="benefitsContainer__bold">metabolism</span> to stay in
+              peak shape
+            </h4>
+          </li>
+          <li class="benefitsContainer__item item2">
+             <img src="./assets/bolt-solid 1.svg" alt="thunder logo" />
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_409)">
+                  <path
+                    d="M15.5982 2.42272C15.8616 1.80205 15.6652 1.07718 15.125 0.6785C14.5848 0.279821 13.8482 0.316065 13.3437 0.760048L1.91515 10.9082C1.46873 11.3069 1.30801 11.9457 1.51783 12.5075C1.72765 13.0693 2.26337 13.4498 2.85712 13.4498H7.8348L4.40176 21.5774C4.13837 22.1981 4.3348 22.923 4.87498 23.3217C5.41515 23.7203 6.15176 23.6841 6.65623 23.2401L18.0848 13.0919C18.5312 12.6932 18.6919 12.0544 18.4821 11.4927C18.2723 10.9309 17.741 10.5549 17.1428 10.5549H12.1652L15.5982 2.42272Z"
+                    fill="#0B0A0C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_409">
+                    <rect
+                      width="20"
+                      height="23.1959"
+                      fill="white"
+                      transform="translate(0 0.4021)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h4>
+              Enjoy jitter-free
+              <span class="benefitsContainer__bold">energy</span> to tackle your
+              busy schedule
+            </h4>
+          </li>
+          <li class="benefitsContainer__item item3">
+             <img src="./assets/Group 143-2.svg" alt="running logo" /> 
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_414)">
+                  <path
+                    d="M15 2.71427C15 1.53123 14.0402 0.571411 12.8572 0.571411C11.6741 0.571411 10.7143 1.53123 10.7143 2.71427C10.7143 3.8973 11.6741 4.85713 12.8572 4.85713C14.0402 4.85713 15 3.8973 15 2.71427ZM6.3259 8.40623C6.76786 7.96427 7.37054 7.71427 8.00001 7.71427C8.08483 7.71427 8.16965 7.71873 8.25001 7.72766L6.85715 11.9107C6.44197 13.1607 6.93304 14.5357 8.05358 15.2366L11.9018 17.6428L10.7679 21.6071C10.5491 22.3661 10.9911 23.1562 11.75 23.375C12.5089 23.5937 13.2991 23.1518 13.5179 22.3928L14.7991 17.9107C15.0625 16.9911 14.683 16.0089 13.875 15.5044L11.3393 13.9196L12.7188 10.2411L12.9464 10.7902C13.6161 12.3884 15.1741 13.4286 16.9063 13.4286H17.8571C18.6473 13.4286 19.2857 12.7902 19.2857 12C19.2857 11.2098 18.6473 10.5714 17.8571 10.5714H16.9063C16.3304 10.5714 15.808 10.2232 15.5893 9.69195L15.308 9.0223C14.6563 7.45534 13.3393 6.25891 11.7143 5.75891L9.54019 5.08927C9.04465 4.93748 8.52679 4.85713 8.00447 4.85713C6.62054 4.85713 5.29019 5.40623 4.31251 6.38838L3.27679 7.41963C2.71876 7.97766 2.71876 8.88391 3.27679 9.44195C3.83483 9.99998 4.74108 9.99998 5.29912 9.44195L6.33037 8.4107L6.3259 8.40623ZM4.78572 16.2857H2.14287C1.35269 16.2857 0.714294 16.9241 0.714294 17.7143C0.714294 18.5044 1.35269 19.1428 2.14287 19.1428H5.25001C6.09822 19.1428 6.86608 18.6428 7.20983 17.8705L7.72322 16.7143L7.29911 16.4464C6.51787 15.9598 5.93751 15.25 5.60715 14.4419L4.78572 16.2857Z"
+                    fill="#0B0A0C"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_414">
+                    <rect
+                      width="20"
+                      height="22.8571"
+                      fill="white"
+                      transform="translate(0 0.571411)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h4>
+              Enhance <span class="benefitsContainer__bold">endurance</span>,
+              <span class="benefitsContainer__bold">performance</span>, and
+              performance
+              <span class="benefitsContainer__bold">recovery</span>
+            </h4>
+          </li>
+          <li class="benefitsContainer__item item4">
+             <img src="./assets/shield-virus-solid 1-1.svg" alt="shield logo" /> 
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_420)">
+                  <path
+                    d="M10.5235 0.113281C10.3594 0.0390625 10.1836 0 10 0C9.81642 0 9.64064 0.0390625 9.47658 0.113281L2.12111 3.23438C1.26174 3.59766 0.621112 4.44531 0.625018 5.46875C0.644549 9.34375 2.2383 16.4336 8.96877 19.6562C9.62111 19.9688 10.3789 19.9688 11.0313 19.6562C17.7617 16.4336 19.3555 9.34375 19.375 5.46875C19.3789 4.44531 18.7383 3.59766 17.8789 3.23438L10.5235 0.113281ZM10 4.375C10.3438 4.375 10.625 4.65625 10.625 5C10.625 6.28906 12.1836 6.93359 13.0938 6.02344C13.336 5.78125 13.7344 5.78125 13.9766 6.02344C14.2188 6.26562 14.2188 6.66406 13.9766 6.90625C13.0664 7.81641 13.711 9.375 15 9.375C15.3438 9.375 15.625 9.65625 15.625 10C15.625 10.3438 15.3438 10.625 15 10.625C13.711 10.625 13.0664 12.1836 13.9766 13.0938C14.2188 13.3359 14.2188 13.7344 13.9766 13.9766C13.7344 14.2187 13.336 14.2187 13.0938 13.9766C12.1836 13.0664 10.625 13.7109 10.625 15C10.625 15.3438 10.3438 15.625 10 15.625C9.65627 15.625 9.37502 15.3438 9.37502 15C9.37502 13.7109 7.81642 13.0664 6.90627 13.9766C6.66408 14.2187 6.26564 14.2187 6.02346 13.9766C5.78127 13.7344 5.78127 13.3359 6.02346 13.0938C6.93361 12.1836 6.28908 10.625 5.00002 10.625C4.65627 10.625 4.37502 10.3438 4.37502 10C4.37502 9.65625 4.65627 9.375 5.00002 9.375C6.28908 9.375 6.93361 7.81641 6.02346 6.90625C5.78127 6.66406 5.78127 6.26562 6.02346 6.02344C6.26564 5.78125 6.66408 5.78125 6.90627 6.02344C7.81642 6.93359 9.37502 6.28906 9.37502 5C9.37502 4.65625 9.65627 4.375 10 4.375ZM9.06252 10C9.58205 10 10 9.58203 10 9.0625C10 8.54297 9.58205 8.125 9.06252 8.125C8.54299 8.125 8.12502 8.54297 8.12502 9.0625C8.12502 9.58203 8.54299 10 9.06252 10ZM11.875 11.25C11.875 10.9062 11.5938 10.625 11.25 10.625C10.9063 10.625 10.625 10.9062 10.625 11.25C10.625 11.5938 10.9063 11.875 11.25 11.875C11.5938 11.875 11.875 11.5938 11.875 11.25Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_420">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h4>
+              Strengthen your
+              <span class="benefitsContainer__bold">immune health</span> to stay
+              on your game
+            </h4>
+          </li>
+          <li class="benefitsContainer__item item5">
+             <img src="./assets/Group 142-1.svg" alt="check logo" /> 
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.6328 3.38281C15.1211 2.89453 15.1211 2.10156 14.6328 1.61328C14.1445 1.125 13.3516 1.125 12.8633 1.61328L7.5 6.98047L5.25781 4.73828C4.76953 4.25 3.97656 4.25 3.48828 4.73828C3 5.22656 3 6.01953 3.48828 6.50781L6.61328 9.63281C7.10156 10.1211 7.89453 10.1211 8.38281 9.63281L14.6328 3.38281ZM18.3828 8.38281C18.8711 7.89453 18.8711 7.10156 18.3828 6.61328C17.8945 6.125 17.1016 6.125 16.6133 6.61328L7.5 15.7305L3.38281 11.6172C2.89453 11.1289 2.10156 11.1289 1.61328 11.6172C1.125 12.1055 1.125 12.8984 1.61328 13.3867L6.61328 18.3867C7.10156 18.875 7.89453 18.875 8.38281 18.3867L18.3828 8.38672V8.38281Z"
+                  fill="#0B0A0C"
+                />
+              </svg>
+            </div>
+
+            <h4>
+              <span class="benefitsContainer__bold">30 sec habit</span>. Mixes
+              in any beverage fast and easy
+            </h4>
+          </li>
+          <li class="benefitsContainer__item item6">
+             <img src="./assets/Group 147.svg" alt="thumbs up logo" /> 
+            <div class="benefitsContainer__iconWrapper">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2422 1.28513C13.2578 1.48826 13.918 2.47654 13.7148 3.49216L13.625 3.93748C13.418 4.98044 13.0352 5.97263 12.5 6.87498H18.125C19.1602 6.87498 20 7.71482 20 8.74998C20 9.73826 19.2383 10.5469 18.2695 10.6211C18.5703 10.9531 18.75 11.3945 18.75 11.875C18.75 12.789 18.0938 13.5508 17.2305 13.7148C17.4023 13.9961 17.5 14.332 17.5 14.6875C17.5 15.5195 16.957 16.2265 16.207 16.4687C16.2344 16.5976 16.25 16.7344 16.25 16.875C16.25 17.9101 15.4102 18.75 14.375 18.75H11.5039C10.7617 18.75 10.0391 18.5312 9.42188 18.1211L7.91797 17.1172C6.875 16.4219 6.25 15.25 6.25 13.9961V12.5V10.625V9.65232C6.25 8.51169 6.76953 7.43748 7.65625 6.72263L7.94531 6.49216C8.98047 5.66404 9.6875 4.49998 9.94531 3.2031L10.0352 2.75779C10.2383 1.74216 11.2266 1.08201 12.2422 1.28513ZM1.25 7.49998H3.75C4.44141 7.49998 5 8.05857 5 8.74998V17.5C5 18.1914 4.44141 18.75 3.75 18.75H1.25C0.558594 18.75 0 18.1914 0 17.5V8.74998C0 8.05857 0.558594 7.49998 1.25 7.49998Z"
+                  fill="#0B0A0C"
+                />
+              </svg>
+            </div>
+
+            <h4>
+              <span class="benefitsContainer__bold">Taste amazing!</span> No
+              bitterness, gritty, or clumpy texture
+            </h4>
+          </li>
+        </ul>
+      </div> -->
+      <section id="benefitsContainer"></section>
+
+      <!-- <div class="usdaContainer" id="usdaContainer">
+        <img
+          src="./assets/usda-organic-logo-1.png"
+          alt="'Usda ORANIC' logo"
+          class="usdaContainer__img"
+        />
+        <h4 class="usdaContainer__text">
+          only exceptional USDA certified organic sustainable sourced
+          ingredients qualify.
+        </h4>
+      </div> -->
+      <section id="usdaContainer"></section>
+
+      <section class="sliderSection" id="sliderSection">
+        <h1 class="sliderSection__productNameRed">
+          [product name]<span class="sliderSection__productName"> blend</span>
+        </h1>
+
+        <!-- all slides starts here ----------------------->
+        <div class="glide" id="glideCarousel">
+          <section class="glide--slidesWithDescription">
+            <h2 class="glide__description">
+              <span class="glide__bold">Metabolism Boosting</span><br />These
+              powerful superfoods ignite your metabolism and reduce bloating.
+              They improve digestion and deliver the energy you need to get
+              things done.
+              <br />
+              <span>Main Organic Ingredients:</span>
+            </h2>
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <!-- slide one  -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic ceylon cinnamon bark</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic green tea</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- second slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic green tea</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- third slide -->
+                <div class="glide__slide">
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acai berry.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/acacia gum.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                  <div class="glide__container">
+                    <div class="glide__singleProduct">
+                      <img src="/assets/cinnamon bark.png" alt="" />
+                      <h4>organic acai berry</h4>
+                    </div>
+                    <div class="glide__singleProduct">
+                      <img src="/assets/green tea.png" alt="" />
+                      <h4>organic acacia gum</h4>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+
+          <!-- slide navigation -->
+
+          <section class="glide glide--navigationContainer">
+            <div class="glide__navigation" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <img src="./assets/angle-left-solid.png" alt="back arrow" />
+              </button>
+
+              <div class="glide__progress" id="tracker">
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgOne"
+                />
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgTwo"
+                />
+                <img
+                  src="./assets/Ellipse-Empty.png"
+                  alt="slide off"
+                  id="navigationImgThree"
+                />
+              </div>
+
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <img src="./assets/angle-left-solid.png" alt="next arrow" />
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <button class="sliderSection__button">
+          <h2>add to cart</h2>
+        </button>
+      </section>
+
+      <section id="processContainer"></section>
+    </main>
+
+    <!-- <footer class="footer">
+      <p class="footer__FAQ">FAQs</p>
+      <div class="footer_accordion">
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h4 class="footer__accordionHeader">
+              What are the Effective ingredients in [product name]?
+            </h4>
+            <img
+              src="./assets/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrow"
+            />
+          </div>
+          <div class="footer__accordionContent">
+            <p>Pellentesque vitae convallis quam, in ultricies leo:</p>
+            <p class="footer__bold">Lorem ipsum dolor sit ame:</p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              gravida sollicitudin diam, vestibulum placerat nisl finibus ut.
+              Duis ac pulvinar justo. Aliquam mi nisl, gravida eget suscipit
+              non, sodales in tortor. Nam purus sem, blandit non justo ac,
+              ornare tempor quam. Morbi pharetra vehicula ornare. Proin gravida
+              turpis orci, sit amet sollicitudin mi rutrum nec.
+            </p>
+
+            <p class="footer__bold">Curabitur gravida ullamcorper dui:</p>
+
+            <p>
+              Pellentesque - tincidunt efficitur suscipit. Aliquam commodo id
+              est eu cursus. Mauris ut elit quis nunc eleifend egestas in ac
+              lorem. Pellentesque - vitae convallis quam, in ultricies leo.
+              Curabitur gravida ullamcorper dui. Aliquam velit arcu, ultrices
+              nec mauris a, vehicula fermentum nisi. Donec commodo - nisl at
+              magna congue volutpat. Suspendisse sed nulla ultricies, elementum
+              risus venenatis, eleifend sem. Vestibulum rutrum ut lectus id
+              dignissim. Curabitur eros diam - bibendum in ipsum ut, posuere
+              suscipit magna. Maecenas at congue purus, vel facilisis odio.
+              Praesent scelerisque, ipsum vel ultricies congue, odio turpis
+              pharetra tellus, ac auctor orci tortor volutpat lectus. Vestibulum
+              tempor - ipsum et nibh mattis, sed volutpat dui bibendum.
+            </p>
+          </div>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assets/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assets/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
+        <div class="footer__accordionItem">
+          <div class="footer__accordionHeaderWrapper">
+            <h3 class="footer__accordionHeader">Other question?</h3>
+            <img
+              src="./assets/angle-left-solid 1.png"
+              alt="accordion arrow"
+              class="footer__accordionArrowUp"
+            />
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <footer id="footer"></footer>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html> -->

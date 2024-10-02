@@ -1,0 +1,38 @@
+// USDA container styles
+.usdaContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 0;
+    background-color: #f5f5f5;
+  
+    &__img {
+      width: 133px;
+    }
+  
+    &__text {
+      font-weight: 400;
+      font-size: 14px;
+      width: 313px;
+      line-height: 17.64px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+  
+      &__text {
+        line-height: 20.16px;
+        font-size: 16px;
+      }
+    }
+  
+    @media screen and (min-width: 1920px) {
+      &__text {
+        width: 351px;
+      }
+    }
+  }

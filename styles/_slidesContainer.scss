@@ -1,0 +1,160 @@
+@import '../node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import '../node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+
+.sliderSection {
+  background-color: #f9e8e7;
+  padding: 30px 0;
+  text-align: center;
+
+  &__productNameRed {
+    color: #c2110e;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 48.25px;
+  }
+
+  &__productName {
+    color: #0b0a0c;
+  }
+
+  &__button {
+    background-color: #0b0a0c;
+    border: none;
+    padding: 11px 42px;
+    width: 360px;
+    border-radius: 15px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 0 50px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 30px 0;
+  }
+}
+
+// Glide slider styles
+.glide {
+  width: 100%;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: default;
+
+  &__slidesWithDescription {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 30px auto;
+    justify-content: center;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px auto;
+    line-height: 27.72px;
+  }
+
+  &__descriptionHeader {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  &__descriptionText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__track {
+    height: 252px;
+    width: 257px;
+    margin: 0 auto;
+    cursor: grab;
+  }
+
+  &__slide {
+    width: 258px;
+    height: 257px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 14px;
+  }
+
+  &__imageTextWrapper {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__navigation {
+    max-width: 174px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+  }
+
+  &__arrow {
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    width: 16.72px;
+    height: 24px;
+    background-image: url('/assets/angle-left-solid.png');
+    background-repeat: no-repeat;
+
+    &--right {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__progress {
+    height: 11px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__singleProduct {
+      font-size: 16px;
+    }
+
+    &__description {
+      width: 490px;
+      gap: 20px;
+    }
+
+    &__descriptionText {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+
+    &__slidesWithDescription {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      gap: 50px;
+    }
+
+    &__description {
+      width: 310px;
+      text-align: left;
+      height: auto;
+    }
+  }
+}

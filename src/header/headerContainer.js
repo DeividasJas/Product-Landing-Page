@@ -1,27 +1,25 @@
 const headerData = {
   image: './assets/top.png',
-  shop:{link: '/', text: 'shop'},
-  mission:{link: '/', text: 'mission'},
+  shop: { link: '/', text: 'shop' },
+  mission: { link: '/', text: 'mission' },
   logoLink: '/',
-
 };
 
 export default function createHeaderContainer() {
   const headerContainer = document.getElementById('headerContainer');
   headerContainer.className = 'header';
 
-//   create hamburger link
+  //   create hamburger link
   const hamburger = document.createElement('a');
-  
-//   working with image
+  hamburger.href = '/';
+
+  //   working with image
   const hamburgerImage = document.createElement('img');
   hamburgerImage.src = headerData.image;
   hamburgerImage.alt = 'menu';
-  hamburgerImage.className = 'header__hamburger';	
+  hamburgerImage.className = 'header__hamburger';
 
-
-
-// create navbar for bigger screen sizes
+  // create navbar for bigger screen sizes
   const navbar = document.createElement('nav');
   navbar.className = 'header__navbar';
 

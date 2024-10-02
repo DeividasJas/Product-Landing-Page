@@ -8,15 +8,8 @@ export default function createUsdaContainer(imageSrc) {
 
   const h4 = document.createElement('h4');
   h4.className = 'usdaContainer__text';
-  h4.innerText = `only exceptional USDA certified organic sustainable sourced ingredients qualify.`
+  h4.innerText = `only exceptional USDA certified organic sustainable sourced ingredients qualify.`;
 
-
-
-  
-  container.appendChild(image)
-  container.appendChild(h4)
-//   document.appendChild(container)
-  console.log(213);
-  
+  container.appendChild(image);
+  container.appendChild(h4);
 }
-
