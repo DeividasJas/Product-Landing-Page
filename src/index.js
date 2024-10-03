@@ -21,3 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
   createFooterContainer('organic');
   
 });
+
+console.log(document.location.href);
