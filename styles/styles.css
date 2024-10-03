@@ -734,7 +734,7 @@
 
 .processContainer {
   background-color: lightgrey;
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px 30px 20px;
 }
 .processContainer__header {
   font-weight: 800;
@@ -920,6 +920,7 @@
 @media screen and (min-width: 1920px) {
   .processContainer {
     height: 879px;
+    padding-bottom: 0;
   }
   .processContainer__contentWrapper {
     margin: 0 auto;
