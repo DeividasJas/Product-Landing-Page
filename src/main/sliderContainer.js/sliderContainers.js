@@ -141,16 +141,16 @@ export default function createSliderContainer(productName) {
     progressTracker.id = 'tracker';
 
     // create navigation images
-    const navigationImgOne = document.createElement('svg');
-    const navigationImgTwo = document.createElement('svg');
-    const navigationImgThree = document.createElement('svg');
-    navigationImgOne.id = 'navigationImgOne';
-    navigationImgTwo.id = 'navigationImgTwo';
-    navigationImgThree.id = 'navigationImgThree';
+    // const navigationImgOne = document.createElement('svg');
+    // const navigationImgTwo = document.createElement('svg');
+    // const navigationImgThree = document.createElement('svg');
+    // navigationImgOne.id = 'navigationImgOne';
+    // navigationImgTwo.id = 'navigationImgTwo';
+    // navigationImgThree.id = 'navigationImgThree';
 
-    progressTracker.appendChild(navigationImgOne);
-    progressTracker.appendChild(navigationImgTwo);
-    progressTracker.appendChild(navigationImgThree);
+    // progressTracker.appendChild(navigationImgOne);
+    // progressTracker.appendChild(navigationImgTwo);
+    // progressTracker.appendChild(navigationImgThree);
 
     glideNavigationSection.appendChild(leftButton);
     glideNavigationSection.appendChild(progressTracker);

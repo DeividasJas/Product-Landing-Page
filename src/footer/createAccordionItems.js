@@ -31,3 +31,4 @@ export default function createAccordionItems(
 
   accordion.appendChild(accordionItem);
 }
+ 

@@ -50,18 +50,23 @@ export default function createFooterContainer(productName) {
   }
 
   document.querySelectorAll('.footer__accordionItem').forEach((item) => {
+    
     const header = item.querySelector('.footer__accordionHeaderWrapper');
     const content = item.querySelector('.footer__accordionContent');
     const arrow = item.querySelector('.footer__accordionArrow');
 
+    
     header.addEventListener('click', function () {
-      const isContentVisible = !content.classList.contains(
+      console.log(header);
+      const isContentVisible = content.classList.contains(
         'footer__accordionContent--hidden'
       );
 
+      console.log(isContentVisible);
+
       closeAllAccordions();
 
-      if (!isContentVisible) {
+      if (isContentVisible) {
         content.classList.remove('footer__accordionContent--hidden');
         arrow.classList.add('footer__accordionArrowUp');
       }

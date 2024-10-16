@@ -83,10 +83,9 @@ export default function processContainer() {
 
       allContent.appendChild(div);
     }
-
-    // adding class here to avoid complex css selectors
+    
     if (index % 2 === 1) {
-      iconTextWrapper.classList.add('justify-end'); // Add this class for every second item
+      iconTextWrapper.classList.add('justify-end'); 
     }
 
     container.appendChild(allContent);

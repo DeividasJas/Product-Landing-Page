@@ -52,7 +52,6 @@
     font-weight: 700;
   }
 
-  // Tablet and larger screens
   @media screen and (min-width: 768px) {
     width: 100%;
 
@@ -73,7 +72,6 @@
     }
   }
 
-  // Desktop and larger screens
   @media screen and (min-width: 1920px) {
     &__accordion {
       width: 800px;
