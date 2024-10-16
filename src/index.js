@@ -19,5 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
   createSliderContainer('organic')
   processContainer()
   createFooterContainer('organic');
-  
 });
