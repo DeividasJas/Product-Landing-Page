@@ -140,18 +140,6 @@ export default function createSliderContainer(productName) {
     progressTracker.className = 'glide__progress';
     progressTracker.id = 'tracker';
 
-    // create navigation images
-    // const navigationImgOne = document.createElement('svg');
-    // const navigationImgTwo = document.createElement('svg');
-    // const navigationImgThree = document.createElement('svg');
-    // navigationImgOne.id = 'navigationImgOne';
-    // navigationImgTwo.id = 'navigationImgTwo';
-    // navigationImgThree.id = 'navigationImgThree';
-
-    // progressTracker.appendChild(navigationImgOne);
-    // progressTracker.appendChild(navigationImgTwo);
-    // progressTracker.appendChild(navigationImgThree);
-
     glideNavigationSection.appendChild(leftButton);
     glideNavigationSection.appendChild(progressTracker);
     glideNavigationSection.appendChild(rightButton);

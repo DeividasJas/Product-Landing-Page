@@ -34,7 +34,6 @@ const data = [
 ];
 
 export default function processContainer() {
-  // everything in here will be added to the container
 
   const container = document.getElementById('processContainer');
   container.className = 'processContainer';
@@ -48,7 +47,6 @@ export default function processContainer() {
   const allContent = document.createElement('div');
   allContent.className = 'processContainer__contentWrapper';
 
-  // store arrow and svg icon will disappear on bigger media query
   data.forEach((item, index) => {
     const iconsWrapper = document.createElement('div');
     iconsWrapper.className = 'processContainer__iconsWrapper';
@@ -84,7 +82,6 @@ export default function processContainer() {
       allContent.appendChild(div);
     }
 
-    // adding class here to avoid complex css selectors
     if (index % 2 === 1) {
       iconTextWrapper.classList.add('justify-end'); // Add this class for every second item
     }
